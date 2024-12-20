@@ -25,7 +25,7 @@ CVE_CHECK_IGNORE += " CVE-2017-16548 "
 
 inherit autotools-brokensep
 
-PACKAGECONFIG ??= "acl attr \
+PACKAGECONFIG ??= "attr \
     ${@bb.utils.filter('DISTRO_FEATURES', 'ipv6', d)} \
 "
 

@@ -30,5 +30,3 @@ do_install () {
 
 RDEPENDS:${PN}:append:libc-glibc = " libgcc"
 
-# pstree is called by ptest-runner-collect-system-data
-RDEPENDS:${PN}:append = " pstree"

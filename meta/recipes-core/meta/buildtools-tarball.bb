@@ -9,23 +9,14 @@ TOOLCHAIN_HOST_TASK ?= "\
     nativesdk-sdk-provides-dummy \
     nativesdk-python3 \
     nativesdk-python3-git \
-    nativesdk-python3-jinja2 \
-    nativesdk-python3-testtools \
     nativesdk-python3-subunit \
     nativesdk-python3-pyyaml \
     nativesdk-ncurses-terminfo-base \
-    nativesdk-chrpath \
     nativesdk-tar \
     nativesdk-buildtools-perl-dummy \
     nativesdk-git \
     nativesdk-git-perltools \
-    nativesdk-pigz \
     nativesdk-make \
-    nativesdk-wget \
-    nativesdk-ca-certificates \
-    nativesdk-texinfo \
-    nativesdk-libnss-nis \
-    nativesdk-rpcsvc-proto \
     nativesdk-patch \
     nativesdk-mtools \
     nativesdk-zstd \

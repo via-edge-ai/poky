@@ -26,7 +26,6 @@ EXTRA_OECONF:class-native = "--enable-targets=all \
                              --disable-werror"
 
 PACKAGECONFIG ??= "${@bb.utils.filter('DISTRO_FEATURES', 'debuginfod', d)}"
-PACKAGECONFIG[debuginfod] = "--with-debuginfod, --without-debuginfod, elfutils"
 
 do_install:class-native () {
 	autotools_do_install

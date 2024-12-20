@@ -39,9 +39,6 @@ inherit autotools texinfo binconfig-disabled pkgconfig
 EXTRA_OECONF = "--disable-asm"
 EXTRA_OEMAKE:class-target = "LIBTOOLFLAGS='--tag=CC'"
 
-PACKAGECONFIG ??= "capabilities"
-PACKAGECONFIG[capabilities] = "--with-capabilities,--without-capabilities,libcap"
-
 do_configure:prepend () {
 	# Else this could be used in preference to the one in aclocal-copy
 	rm -f ${S}/m4/gpg-error.m4

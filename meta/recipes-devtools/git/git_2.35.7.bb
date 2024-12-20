@@ -151,7 +151,7 @@ FILES:${PN}-perltools += " \
     ${datadir}/perl5 \
 "
 
-RDEPENDS:${PN}-perltools = "${PN} perl perl-module-file-path findutils"
+RDEPENDS:${PN}-perltools = "${PN} perl perl-module-file-path"
 
 # git-tk package with gitk and git-gui
 PACKAGES =+ "${PN}-tk"
