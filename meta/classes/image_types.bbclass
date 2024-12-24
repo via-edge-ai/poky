@@ -314,7 +314,6 @@ CONVERSION_CMD:base64 = "base64 ${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.${type} > ${IM
 CONVERSION_CMD:zsync = "zsyncmake_curl ${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.${type}"
 CONVERSION_CMD:gzsync = "zsyncmake_curl -z ${IMAGE_NAME}${IMAGE_NAME_SUFFIX}.${type}"
 CONVERSION_DEPENDS_lzma = "xz-native"
-CONVERSION_DEPENDS_gz = "pigz-native"
 CONVERSION_DEPENDS_bz2 = "pbzip2-native"
 CONVERSION_DEPENDS_xz = "xz-native"
 CONVERSION_DEPENDS_lz4 = "lz4-native"

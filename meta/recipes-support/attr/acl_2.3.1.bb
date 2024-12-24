@@ -68,8 +68,6 @@ RDEPENDS:${PN}-ptest = "acl \
                         perl-module-posix \
                         shadow \
                         make \
-                        gawk \
-                        e2fsprogs-mke2fs \
                         perl-module-cwd \
                         perl-module-file-basename \
                         perl-module-file-path \

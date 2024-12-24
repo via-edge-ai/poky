@@ -56,7 +56,6 @@ RDEPENDS:${PN}-ptest = "attr \
                         perl-module-posix \
                         make \
                         perl \
-                        gawk \
                         perl-module-cwd \
                         perl-module-file-basename \
                         perl-module-file-path \

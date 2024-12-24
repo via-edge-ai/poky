@@ -4,9 +4,9 @@ LICENSE = "MIT"
 
 DEPENDS = "\
            parted-native gptfdisk-native dosfstools-native \
-           mtools-native bmap-tools-native grub-native cdrtools-native \
-           btrfs-tools-native squashfs-tools-native pseudo-native \
-           e2fsprogs-native util-linux-native tar-native erofs-utils-native \
+           mtools-native bmap-tools-native grub-native \
+           pseudo-native \
+           util-linux-native tar-native erofs-utils-native \
            virtual/${TARGET_PREFIX}binutils \
            "
 DEPENDS:append:x86 = " syslinux-native syslinux grub-efi systemd-boot"

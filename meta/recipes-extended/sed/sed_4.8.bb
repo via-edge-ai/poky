@@ -18,7 +18,7 @@ inherit autotools texinfo update-alternatives gettext ptest
 
 PACKAGECONFIG[selinux] = "--with-selinux,--without-selinux,libselinux"
 
-RDEPENDS:${PN}-ptest += "make gawk perl perl-module-filehandle perl-module-file-compare perl-module-file-find perl-module-file-temp perl-module-file-stat"
+RDEPENDS:${PN}-ptest += "make perl perl-module-filehandle perl-module-file-compare perl-module-file-find perl-module-file-temp perl-module-file-stat"
 RRECOMMENDS:${PN}-ptest:append:libc-glibc = " locale-base-ru-ru locale-base-en-us locale-base-el-gr.iso-8859-7"
 
 EXTRA_OECONF = "--disable-acl \
