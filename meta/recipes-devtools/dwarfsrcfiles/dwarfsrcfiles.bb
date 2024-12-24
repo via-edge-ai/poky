@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://../dwarfsrcfiles.c;md5=31483894e453a77acbb67847565f1b
 
 SRC_URI = "file://dwarfsrcfiles.c"
 BBCLASSEXTEND = "native"
-DEPENDS = "elfutils"
+DEPENDS = ""
 DEPENDS:append:libc-musl = " argp-standalone"
 
 do_compile () {

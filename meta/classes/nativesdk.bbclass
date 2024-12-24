@@ -28,7 +28,6 @@ PACKAGE_ARCHS = "${SDK_PACKAGE_ARCHS}"
 # We need chrpath >= 0.14 to ensure we can deal with 32 and 64 bit
 # binaries
 #
-DEPENDS:append = " chrpath-replacement-native"
 EXTRANATIVEPATH += "chrpath-native"
 
 PKGDATA_DIR = "${PKGDATA_DIR_SDK}"

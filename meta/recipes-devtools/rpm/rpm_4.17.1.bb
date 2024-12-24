@@ -47,7 +47,7 @@ SRCREV = "5bef402da334595ed9302b8bca1acdf5e88bfe11"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "lua libgcrypt file popt xz bzip2 elfutils python3"
+DEPENDS = "lua libgcrypt file popt xz bzip2 python3"
 DEPENDS:append:class-native = " file-replacement-native bzip2-replacement-native"
 
 inherit autotools gettext pkgconfig python3native

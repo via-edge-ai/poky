@@ -141,19 +141,6 @@ SUMMARY:packagegroup-base-keyboard = "Keyboard support"
 RDEPENDS:packagegroup-base-keyboard = "\
     ${VIRTUAL-RUNTIME_keymaps}"
 
-SUMMARY:packagegroup-base-pci = "PCI bus support"
-RDEPENDS:packagegroup-base-pci = "\
-    pciutils"
-
-SUMMARY:packagegroup-base-acpi = "ACPI support"
-RDEPENDS:packagegroup-base-acpi = "\
-    acpid"
-
-SUMMARY:packagegroup-base-apm = "APM support"
-RDEPENDS:packagegroup-base-apm = "\
-    ${VIRTUAL-RUNTIME_apm} \
-    apmd"
-
 SUMMARY:packagegroup-base-ext2 = "ext2 filesystem support"
 RDEPENDS:packagegroup-base-ext2 = "\
     e2fsprogs-e2fsck \
@@ -173,9 +160,7 @@ RRECOMMENDS:packagegroup-base-vfat = "\
 
 SUMMARY:packagegroup-base-alsa = "ALSA sound support"
 RDEPENDS:packagegroup-base-alsa = "\
-    alsa-utils-alsactl \
-    alsa-utils-amixer \
-    ${VIRTUAL-RUNTIME_alsa-state}"
+    "
 
 RRECOMMENDS:packagegroup-base-alsa = "\
     kernel-module-snd-mixer-oss \
@@ -199,7 +184,6 @@ RRECOMMENDS:packagegroup-base-pcmcia = "\
 
 SUMMARY:packagegroup-base-bluetooth = "Bluetooth support"
 RDEPENDS:packagegroup-base-bluetooth = "\
-    bluez5 \
     "
 
 RRECOMMENDS:packagegroup-base-bluetooth = "\
@@ -228,7 +212,7 @@ RRECOMMENDS:packagegroup-base-usbgadget = "\
 
 SUMMARY:packagegroup-base-usbhost = "USB host support"
 RDEPENDS:packagegroup-base-usbhost = "\
-    usbutils "
+    "
 
 RRECOMMENDS:packagegroup-base-usbhost = "\
     kernel-module-uhci-hcd \
@@ -269,9 +253,7 @@ RRECOMMENDS:packagegroup-base-ipsec = "\
 #
 SUMMARY:packagegroup-base-wifi = "WiFi support"
 RDEPENDS:packagegroup-base-wifi = "\
-    iw \
-    wireless-regdb-static \
-    wpa-supplicant"
+    "
 
 RRECOMMENDS:packagegroup-base-wifi = "\
     ${@bb.utils.contains('COMBINED_FEATURES', 'usbhost', 'kernel-module-zd1211rw', '',d)} \
@@ -289,18 +271,10 @@ RRECOMMENDS:packagegroup-base-wifi = "\
 
 SUMMARY:packagegroup-base-nfc = "Near Field Communication support"
 RDEPENDS:packagegroup-base-nfc = "\
-    neard"
+    "
 
 RRECOMMENDS:packagegroup-base-nfc = "\
     kernel-module-nfc"
-
-SUMMARY:packagegroup-base-3g = "Cellular data support"
-RDEPENDS:packagegroup-base-3g = "\
-    ofono"
-
-RRECOMMENDS:packagegroup-base-3g = "\
-    kernel-module-cdc-acm \
-    kernel-module-cdc-wdm"
 
 SUMMARY:packagegroup-base-smbfs = "SMB network filesystem support"
 RRECOMMENDS:packagegroup-base-smbfs = "\
@@ -316,17 +290,10 @@ RRECOMMENDS:packagegroup-base-cramfs = "\
 #
 SUMMARY:packagegroup-base-nfs = "NFS network filesystem support"
 RDEPENDS:packagegroup-base-nfs = "\
-    rpcbind"
+    "
 
 RRECOMMENDS:packagegroup-base-nfs = "\
     kernel-module-nfs "
-
-SUMMARY:packagegroup-base-zeroconf = "Zeroconf support"
-RDEPENDS:packagegroup-base-zeroconf = "\
-    avahi-daemon"
-RDEPENDS:packagegroup-base-zeroconf:append:libc-glibc = "\
-    libnss-mdns \
-    "
 
 SUMMARY:packagegroup-base-ipv6 = "IPv6 support"
 RDEPENDS:packagegroup-base-ipv6 = "\
@@ -340,6 +307,3 @@ RDEPENDS:packagegroup-base-serial = "\
     setserial \
     lrzsz "
 
-SUMMARY:packagegroup-base-phone = "Cellular telephony (voice) support"
-RDEPENDS:packagegroup-base-phone = "\
-    ofono"
