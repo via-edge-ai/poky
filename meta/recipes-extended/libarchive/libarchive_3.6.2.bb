@@ -5,9 +5,7 @@ SECTION = "devel"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d499814247adaee08d88080841cb5665"
 
-DEPENDS = "e2fsprogs-native"
-
-PACKAGECONFIG ?= "zlib bz2 xz lzo zstd ${@bb.utils.filter('DISTRO_FEATURES', 'acl xattr', d)}"
+PACKAGECONFIG ?= "zlib bz2 xz lzo zstd ${@bb.utils.filter('DISTRO_FEATURES', 'xattr', d)}"
 
 DEPENDS_BZIP2 = "bzip2-replacement-native"
 DEPENDS_BZIP2:class-target = "bzip2"
@@ -44,7 +42,7 @@ do_configure[cleandirs] += "${WORKDIR}/extra-includes"
 do_configure:prepend() {
 	# We just need the headers for some type constants, so no need to
 	# build all of e2fsprogs for the target
-	cp -R ${STAGING_INCDIR_NATIVE}/ext2fs ${WORKDIR}/extra-includes/
+	#cp -R ${STAGING_INCDIR_NATIVE}/ext2fs ${WORKDIR}/extra-includes/
 }
 
 ALTERNATIVE_PRIORITY = "80"

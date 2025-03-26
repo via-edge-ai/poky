@@ -173,7 +173,7 @@ do_install () {
 	done
 }
 
-ELFUTILS = "nativesdk-elfutils"
+ELFUTILS = ""
 DEPENDS += "nativesdk-gmp nativesdk-mpfr nativesdk-libmpc ${ELFUTILS} nativesdk-zlib nativesdk-zstd"
 RDEPENDS:${PN} += "nativesdk-mpfr nativesdk-libmpc ${ELFUTILS}"
 

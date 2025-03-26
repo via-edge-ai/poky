@@ -125,7 +125,6 @@ RDEPENDS:packagegroup-self-hosted-extended = "\
     git \
     git-perltools \
     grep \
-    groff \
     gzip \
     settings-daemon \
     libaio \
@@ -140,14 +139,7 @@ RDEPENDS:packagegroup-self-hosted-extended = "\
     mtools \
     ncurses \
     ncurses-terminfo-base \
-    nfs-utils \
-    nfs-utils-client \
     openssl \
-    openssh-scp \
-    openssh-sftp-server \
-    openssh-ssh \
-    opkg \
-    opkg-utils \
     patch \
     perl \
     perl-dev \

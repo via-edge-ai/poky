@@ -28,7 +28,7 @@ PACKAGES += "${PN}-codegen ${PN}-utils"
 
 LEAD_SONAME = "libglib-2.0.*"
 
-inherit meson gettext gtk-doc pkgconfig ptest-gnome upstream-version-is-even bash-completion gio-module-cache manpages
+inherit meson gettext gtk-doc pkgconfig upstream-version-is-even bash-completion gio-module-cache manpages
 
 DEPENDS:append:class-target = "${@' gtk-doc' if d.getVar('GTKDOC_ENABLED') == 'True' else ''}"
 
@@ -73,7 +73,7 @@ FILES:${PN}-codegen = "${datadir}/glib-2.0/codegen/*.py \
                        ${bindir}/gdbus-codegen"
 FILES:${PN}-utils = "${bindir}/*"
 
-SHAREDMIMEDEP = "shared-mime-info"
+SHAREDMIMEDEP = ""
 SHAREDMIMEDEP:class-native = ""
 # When cross compiling for Windows we don't want to include this
 SHAREDMIMEDEP:mingw32 = ""
@@ -148,13 +148,6 @@ RDEPENDS:${PN}-ptest += "\
             coreutils \
             libgcc \
             dbus \
-            gnome-desktop-testing \
-            tzdata \
-            tzdata-americas \
-            tzdata-asia \
-            tzdata-europe \
-            tzdata-posix \
-            shared-mime-info \
             ${PN}-locale-ja \
             ${PN}-locale-fr \
             ${PN}-locale-el \

@@ -72,7 +72,7 @@ inherit autotools pkgconfig binconfig multilib_header
 # Entropy source for random PACKAGECONFIG option
 RANDOM ?= "/dev/urandom"
 
-PACKAGECONFIG ??= "${@bb.utils.filter('DISTRO_FEATURES', 'ipv6', d)} libidn openssl proxy random threaded-resolver verbose zlib"
+PACKAGECONFIG ??= "${@bb.utils.filter('DISTRO_FEATURES', 'ipv6', d)} openssl proxy random threaded-resolver verbose zlib"
 PACKAGECONFIG:class-native = "ipv6 openssl proxy random threaded-resolver verbose zlib"
 PACKAGECONFIG:class-nativesdk = "ipv6 openssl proxy random threaded-resolver verbose zlib"
 
@@ -91,7 +91,6 @@ PACKAGECONFIG[krb5] = "--with-gssapi,--without-gssapi,krb5"
 PACKAGECONFIG[ldap] = "--enable-ldap,--disable-ldap,openldap"
 PACKAGECONFIG[ldaps] = "--enable-ldaps,--disable-ldaps,openldap"
 PACKAGECONFIG[libgsasl] = "--with-libgsasl,--without-libgsasl,libgsasl"
-PACKAGECONFIG[libidn] = "--with-libidn2,--without-libidn2,libidn2"
 PACKAGECONFIG[libssh2] = "--with-libssh2,--without-libssh2,libssh2"
 PACKAGECONFIG[mbedtls] = "--with-mbedtls=${STAGING_DIR_TARGET},--without-mbedtls,mbedtls"
 PACKAGECONFIG[mqtt] = "--enable-mqtt,--disable-mqtt,"

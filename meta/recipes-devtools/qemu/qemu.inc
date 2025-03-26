@@ -230,10 +230,9 @@ do_install:append() {
 # END of qemu-mips workaround
 
 # Disable kvm/virgl/mesa on targets that do not support it
-PACKAGECONFIG:remove:darwin = "kvm virglrenderer epoxy gtk+"
-PACKAGECONFIG:remove:mingw32 = "kvm virglrenderer epoxy gtk+"
+PACKAGECONFIG:remove:darwin = "kvm gtk+"
+PACKAGECONFIG:remove:mingw32 = "kvm gtk+"
 
-PACKAGECONFIG[sdl] = "--enable-sdl,--disable-sdl,libsdl2"
 PACKAGECONFIG[virtfs] = "--enable-virtfs --enable-attr --enable-cap-ng,--disable-virtfs,libcap-ng attr,"
 PACKAGECONFIG[aio] = "--enable-linux-aio,--disable-linux-aio,libaio,"
 PACKAGECONFIG[uring] = "--enable-linux-io-uring,--disable-linux-io-uring,liburing"
@@ -254,14 +253,13 @@ PACKAGECONFIG[nettle] = "--enable-nettle,--disable-nettle,nettle"
 PACKAGECONFIG[libusb] = "--enable-libusb,--disable-libusb,libusb1"
 PACKAGECONFIG[fdt] = "--enable-fdt,--disable-fdt,dtc"
 PACKAGECONFIG[alsa] = "--audio-drv-list=default,,alsa-lib"
-PACKAGECONFIG[epoxy] = "--enable-opengl,--disable-opengl,libepoxy"
+PACKAGECONFIG[epoxy] = "--enable-opengl,--disable-opengl"
 PACKAGECONFIG[lzo] = "--enable-lzo,--disable-lzo,lzo"
 PACKAGECONFIG[numa] = "--enable-numa,--disable-numa,numactl"
 PACKAGECONFIG[gnutls] = "--enable-gnutls,--disable-gnutls,gnutls"
 PACKAGECONFIG[bzip2] = "--enable-bzip2,--disable-bzip2,bzip2"
 PACKAGECONFIG[libiscsi] = "--enable-libiscsi,--disable-libiscsi"
 PACKAGECONFIG[kvm] = "--enable-kvm,--disable-kvm"
-PACKAGECONFIG[virglrenderer] = "--enable-virglrenderer,--disable-virglrenderer,virglrenderer"
 # spice will be in meta-networking layer
 PACKAGECONFIG[spice] = "--enable-spice,--disable-spice,spice"
 # usbredir will be in meta-networking layer

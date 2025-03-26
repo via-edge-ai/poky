@@ -131,8 +131,7 @@ LDFLAGS = "${BUILDSDK_LDFLAGS} \
 # We need chrpath >= 0.14 to ensure we can deal with 32 and 64 bit
 # binaries
 #
-DEPENDS:append = " chrpath-replacement-native"
-EXTRANATIVEPATH += "chrpath-native"
+EXTRANATIVEPATH += ""
 
 # Path mangling needed by the cross packaging
 # Note that we use := here to ensure that libdir and includedir are

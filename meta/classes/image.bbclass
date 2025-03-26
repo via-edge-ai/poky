@@ -3,7 +3,7 @@ IMAGE_CLASSES ??= ""
 
 # rootfs bootstrap install
 # warning -  image-container resets this
-ROOTFS_BOOTSTRAP_INSTALL = "run-postinsts"
+ROOTFS_BOOTSTRAP_INSTALL = ""
 
 # Handle inherits of any of the image classes we need
 IMGCLASSES = "rootfs_${IMAGE_PKGTYPE} image_types ${IMAGE_CLASSES}"

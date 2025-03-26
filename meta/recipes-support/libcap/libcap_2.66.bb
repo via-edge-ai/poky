@@ -31,8 +31,6 @@ inherit lib_package
 PACKAGECONFIG ??= "${@bb.utils.filter('DISTRO_FEATURES', 'pam', d)}"
 PACKAGECONFIG:class-native ??= ""
 
-PACKAGECONFIG[pam] = "PAM_CAP=yes,PAM_CAP=no,libpam"
-
 EXTRA_OEMAKE = " \
   INDENT=  \
   lib='${baselib}' \
